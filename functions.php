@@ -22,25 +22,25 @@ add_action('wp_enqueue_scripts', function() {
     }
 });
 
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_style('dashicons');
+});
+
 add_filter('learn-press/profile-tabs', function ($tabs) {
 
-    // 1. Add your custom tab
     $tabs['my-apps'] = array(
-        'title'    => __('My Apps', 'astra-child-theme'),
+        'title'    => '<span class="dashicons dashicons-grid-view" style="margin-right:5px;"></span>' . __('My Apps', 'astra-child-theme'),
         'slug'     => 'my-apps',
-        'icon'     => 'dashicons-grid-view',
-        'priority' => 1, // Very low = appears first
+        'priority' => 1,
         'callback' => function() {
-            learn_press_get_template('profile/tabs/my-apps.php');
+            echo '<div class="lp-profile-content"><h2>My Apps (Test)</h2><p>Content loaded directly!</p></div>';
         }
     );
 
-    // 2. Reorder tabs by priority (lower priority first)
     uasort($tabs, function($a, $b) {
         return ($a['priority'] ?? 100) <=> ($b['priority'] ?? 100);
     });
 
-    // 3. Return the sorted tabs
     return $tabs;
 });
 

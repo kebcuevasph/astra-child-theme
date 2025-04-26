@@ -1,12 +1,10 @@
 <?php
 /**
- * Template for the "My Apps" profile tab.
+ * Template for the "My Apps" tab.
  */
 ?>
 
-<div class="lp-profile-content my-apps-content">
+<div class="lp-profile-content">
     <h2>My Apps</h2>
-    <p>Welcome! Here you'll soon find all the apps you've signed up for.</p>
-
-    <!-- Later on, you can add the apps grid here -->
+    <p>Here are your apps! (Test successful.)</p>
 </div>
