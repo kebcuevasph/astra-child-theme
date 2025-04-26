@@ -1,0 +1,13 @@
+/*
+Theme Name:   Astra Child
+Theme URI:    https://github.com/kebcuevasph/astra-child-theme
+Description:  A child theme of Astra.
+Author:       Keb Cuevas
+Author URI:   https://kebcuevas.com
+Template:     astra
+Version:      1.0
+*/
+
+.learn-press-form .form-fields .form-field>label {
+    font-style: normal !important;
+}
